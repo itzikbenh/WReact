@@ -14,5 +14,5 @@ Make sure to modify the BrowserSync proxy link inside the gulpfile.js.
 1. ``` gulp ``` Will compile, start BrowserSync and watch for any changes.
 2. ``` gulp production ``` Will compile and minify assets. 
 
-## Vue devtools
+## React devtools
 Download it [here](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
