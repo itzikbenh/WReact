@@ -28,25 +28,3 @@ add_action( 'wp_enqueue_scripts', 'theme_js' );
 
 add_theme_support( 'menus' );
 add_theme_support( 'post-thumbnails' ); 
-
- 
-
-function phoenix_event_listener() {
-    if( isset($_GET['auth']) && $_GET['auth'] == 'socket' ) {
-        $body = @file_get_contents('php://input');
-        $event = json_decode($body);
-        //echo $event->body;
-
-        if (is_user_logged_in()) {
-            echo "logged in";
-        } else {
-            echo "not logged in";
-        }
-
-        status_header( 200 );
-        exit;
-    }
-}
-
-
-add_action('init', 'phoenix_event_listener');
